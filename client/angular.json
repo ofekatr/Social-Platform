@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "fixel": {
+    "social-platform": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/fixel",
+            "outputPath": "dist/social-platform",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -65,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "fixel:build"
+            "browserTarget": "social-platform:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "fixel:build:production"
+              "browserTarget": "social-platform:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "fixel:build"
+            "browserTarget": "social-platform:build"
           }
         },
         "test": {
@@ -113,16 +113,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "fixel:serve"
+            "devServerTarget": "social-platform:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "fixel:serve:production"
+              "devServerTarget": "social-platform:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "fixel"
+  "defaultProject": "social-platform"
 }
