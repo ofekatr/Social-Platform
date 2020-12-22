@@ -6,10 +6,11 @@ const { validateLoginInput, validateRegisterInput } = require('../../utils/authe
 const generateToken = require("../../utils/authentication/token-utils");
 
 const login = async (req, res, next) => {
-    const { username, password } = req.body;
-    const { valid, errors } = validateLoginInput(username, password);
+    const { email, password } = req.body;
+    const username = undefined;
+    const { valid, errors } = validateLoginInput(email, password);
     if (!valid) {
-        next(ApiError.invalidInput(errors));
+        return next(ApiError.invalidInput(errors));
     }
     try {
         if (1 + 1 === 0) {
@@ -29,7 +30,6 @@ const login = async (req, res, next) => {
                 user: { id, email, username, token }
             })
         }
-        console.log("OI");
         res.status(201).send(true);
     } catch (err) {
         return next(err);
@@ -59,7 +59,6 @@ const register = async (req, res, next) => {
                 }
             });
         }
-        console.log("OI");
         res.status(201).send(true);
     } catch (err) {
         return next(err);

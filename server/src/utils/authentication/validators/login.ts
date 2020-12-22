@@ -3,11 +3,11 @@ const { isEmptyRemoveWhiteSpace, isEmptyAllowWhiteSpace } = require('../../strin
 export { };
 
 function validateLoginInput(
-    username: string,
+    email: string,
     password: string
 ) {
     const errors: any = {};
-    validateUsername(username, errors);
+    validateEmail(email, errors);
     validatePassword(password, errors);
     return {
         valid: Object.keys(errors).length < 1,

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+import { ServerService } from 'src/app/services/server/server.service';
+
 @Component({
   selector: 'app-login-form',
   templateUrl: './login-form.component.html',
@@ -10,7 +12,7 @@ export class LoginFormComponent implements OnInit {
 
   loginForm: FormGroup;
 
-  constructor(private formBuild: FormBuilder) {
+  constructor(private formBuild: FormBuilder, private server: ServerService) {
     this.loginForm = formBuild.group({
       email: ['', Validators.required],
       password: ['', Validators.required],
@@ -21,7 +23,8 @@ export class LoginFormComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.loginForm.value);
+    this.server.login(this.loginForm.value).subscribe(data => {
+      console.log(data);
+    })
   }
-
 }
