@@ -1,4 +1,6 @@
-"# Social-Platform" 
+#Social Pete
+
+A social platform
 
 ![Screenshot (128)](https://user-images.githubusercontent.com/46415136/103010079-5f0f6500-4540-11eb-9522-35ee47bc0f99.png)
 
