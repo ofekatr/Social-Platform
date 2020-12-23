@@ -6,9 +6,14 @@ nav .navbar-nav li a {
   color: white !important;
   transition: color 250ms ease-out;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: #ff8fa3 !important;
   }
+}
+
+.dropdown-menu, .dropdown-item:hover{
+  background: #333 !important;
 }
 
 #logo {
