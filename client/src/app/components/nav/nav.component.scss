@@ -1,8 +1,13 @@
 #nav {
-    z-index: 1;
+  z-index: 1;
+}
+
+nav .navbar-nav li a {
+  color: white !important;
 }
 
 #logo {
-    font-size: 1.75rem;
-    text-transform: uppercase;
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  color: #ff8fa3;
 }

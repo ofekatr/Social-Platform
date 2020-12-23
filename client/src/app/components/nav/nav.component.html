@@ -1,5 +1,5 @@
 <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-dark">
-  <a id="logo" class="navbar-brand" href="">Social Pete</a>
+  <a id="logo" class="navbar-brand" routerLink="">Social Pete</a>
   <button
     class="navbar-toggler"
     type="button"
@@ -15,19 +15,19 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href=""
+        <a class="nav-link" routerLink=""
           ><fa-icon [icon]="faHome"></fa-icon> Home
           <span class="sr-only">(current)</span></a
         >
       </li>
       <li class="nav-item">
-        <a class="nav-link" routeLink="about">
+        <a class="nav-link" routerLink="profile/123">
           <fa-icon [icon]="faUser"></fa-icon>
           Me
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routeLink="about">
+        <a class="nav-link" routerLink="about">
           <fa-icon [icon]="faQuestion"></fa-icon>
           About
         </a>
